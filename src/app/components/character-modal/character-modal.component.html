@@ -1,6 +1,6 @@
 <div class=" flex justify-center">
-    <div *ngIf="characterData?.image" class="p-2 w-[50%] h-500px overflow-hidden flex justify-center items-center object-cover">
-        <img class="object-cover" src={{this.characterData?.image}} alt="" width="70%">
+    <div *ngIf="characterData?.image" class="p-2 w-[300px] h-[400px] overflow-hidden flex justify-evenly items-center object-cover">
+        <img class="object-cover w-full h-full" src={{this.characterData?.image}} alt="" >
     </div>
     <ul class=" pr-10 justify-center space-y-4">
         <li *ngIf="characterData?.name" class=" font-bold"> Name: <span>{{this.characterData?.name}}</span> </li>
