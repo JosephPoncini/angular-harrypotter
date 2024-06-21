@@ -1,0 +1,14 @@
+<div class=" mt-12">
+    <ul class=" grid grid-cols-8 gap-y-10">
+        @for (person of characterList ; track person.id) {
+        <li (click)="this.setName(person.name)" class=" font-bold tet-xl h-10 cursor-pointer hover:text-gray-900">{{person.name}}</li>
+        }
+    </ul>
+    <div *ngIf="isDivVisible" class="absolute w-[40vw] h-[60vh] bg-white top-[20vh] left-[30vw] rounded-xl">
+        <div class=" w-full h-full flex flex-col">
+            <div (click)="this.turnOffModal()" class=" self-end text-4xl mt-10 mr-10 cursor-pointer">X</div>
+            <app-character-modal [name]="this.nameSelected"></app-character-modal>
+        </div>
+    </div>
+    <div class="object-cover"></div>
+</div>

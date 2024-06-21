@@ -1,0 +1,23 @@
+<div class=" flex justify-center">
+    <div *ngIf="characterData?.image" class="p-2 w-[50%] h-500px overflow-hidden flex justify-center items-center object-cover">
+        <img class="object-cover" src={{this.characterData?.image}} alt="" width="70%">
+    </div>
+    <ul class=" pr-10 justify-center space-y-4">
+        <li *ngIf="characterData?.name" class=" font-bold"> Name: <span>{{this.characterData?.name}}</span> </li>
+        <li *ngIf="characterData?.gender" class=" font-bold"> Gender: <span>{{this.characterData?.gender}}</span> </li>
+        <li *ngIf="characterData?.house" class=" font-bold"> House: <span>{{this.characterData?.house}}</span> </li>
+        <li *ngIf="characterData?.dateOfBirth" class=" font-bold"> Date of Birth: <span>{{this.characterData?.dateOfBirth}}</span> </li>
+        <li *ngIf="characterData?.eyeColour" class=" font-bold"> Eye Color: <span>{{this.characterData?.eyeColour}}</span> </li>
+        <li *ngIf="characterData?.hairColour" class=" font-bold"> Hair Color: <span>{{this.characterData?.hairColour}}</span> </li>
+        <li *ngIf="characterData?.wizard" class="font-bold">Status: Wizard</li>
+        <li *ngIf="!characterData?.wizard" class="font-bold">Status: Non-wizard</li>
+        <li *ngIf="characterData?.wand?.wood || characterData?.wand?.core || characterData?.wand?.length" class=" font-bold"> Wand:
+            <ul class=" pl-4">
+                <li *ngIf="characterData?.wand?.wood">Wood: <span>{{this.characterData?.wand?.wood}}</span></li>
+                <li *ngIf="characterData?.wand?.core">Core: <span>{{this.characterData?.wand?.core}}</span></li>
+                <li *ngIf="characterData?.wand?.length">Length: <span>{{this.characterData?.wand?.length}}</span></li>
+            </ul>
+        </li>
+
+    </ul>
+</div>
